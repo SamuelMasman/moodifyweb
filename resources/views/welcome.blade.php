@@ -130,7 +130,7 @@
 
         /* About Us Section */
         .about-us {
-            background-color: #F0F8FF;
+            background-color: #ffffff;
             padding: 60px 0;
         }
 
