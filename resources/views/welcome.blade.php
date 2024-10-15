@@ -27,7 +27,7 @@
         }
 
         .navbar-brand img {
-            height: 50px;
+            height: 80px;
         }
 
         .navbar-nav .nav-link {
@@ -60,10 +60,22 @@
             color: white;
         }
 
+        .btn-get-started {
+            background-color: #FF9F1C;
+            color: white;
+            padding: 12px 30px;
+            font-weight: bold;
+            border: none;
+            border-radius: 30px;
+        }
+
+        .btn-get-started:hover {
+            background-color: #e57a00;
+        }
 
         /* Hero Section */
         .hero {
-            background-color: #F0F8FF;
+            background-color: #ffffff;
             padding: 60px 0;
             text-align: left;
         }
@@ -101,22 +113,84 @@
             text-align: center;
             font-weight: bold;
             color: #036AA1;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+        }
+
+        .services p {
+            color: #6C757D;
+            /* Subtle text color for the paragraph */
+            font-size: 1rem;
         }
 
         .services .service-btn {
-            background-color: #E9ECEF;
+            background-color: #F0FAFF;
+            font-weight: bold;
             border: none;
             color: #036AA1;
-            padding: 10px 20px;
+            padding: 12px 25px;
             border-radius: 30px;
             margin: 10px;
+            font-size: 1rem;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         .services .service-btn.active {
             background-color: #036AA1;
             color: white;
         }
+
+        .services .service-btn:hover {
+            background-color: #036AA1;
+            color: white;
+        }
+
+        /* Relationship Consultation Section */
+        .services h3 {
+            font-size: 1.5rem;
+            color: #036AA1;
+            font-weight: bold;
+        }
+
+        .services ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .services ul li {
+            position: relative;
+            padding-left: 20px;
+            font-size: 1rem;
+            color: #075985;
+        }
+
+        .services ul li::before {
+            content: '\2022';
+            /* Unicode for bullet point */
+            color: #036AA1;
+            font-weight: bold;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .services img {
+            margin-left: 20%;
+        }
+
+        .btn-primary {
+            background-color: #036AA1;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #025d88;
+            color: white;
+        }
+
 
         .card {
             border: none;
@@ -128,10 +202,18 @@
             object-fit: cover;
         }
 
+        .card-title {
+            font-weight: bold;
+        }
+
         /* About Us Section */
         .about-us {
             background-color: #ffffff;
             padding: 60px 0;
+        }
+
+        .about-us p {
+            text-align: center;
         }
 
         .about-us h2 {
@@ -143,6 +225,10 @@
         .about-us h3 {
             color: #075985;
             text-align: center;
+        }
+
+        .about-us h5 {
+            font-weight: bold;
         }
 
         /* Footer Styles */
@@ -158,6 +244,11 @@
 
         .footer h5 {
             font-size: 1.2rem;
+        }
+
+        .footer-logo {
+            width: 250px;
+            height: auto;
         }
     </style>
 </head>
@@ -223,8 +314,11 @@
                 <button class="service-btn">Marriage</button>
                 <button class="service-btn">Self-esteem</button>
             </div>
-            <div class="row">
-                <div class="col-md-6">
+            <div class="row mt-4">
+                <div class="col-md-6 order-md-1">
+                    <img src="images/Home Image 2.png" alt="Relationship Consultation" class="img-fluid">
+                </div>
+                <div class="col-md-6 order-md-2">
                     <h3>Relationship Consultation</h3>
                     <p>An online relationship counseling service to help individuals and couples navigate challenges,
                         improve communication, and strengthen their bonds.</p>
@@ -234,12 +328,10 @@
                     </ul>
                     <button class="btn btn-primary">Start</button>
                 </div>
-                <div class="col-md-6">
-                    <img src="images/Home Image 2.png" alt="Relationship Consultation" class="img-fluid">
-                </div>
             </div>
         </div>
     </section>
+
 
     <!-- Blog Section -->
     <section class="blog">
@@ -275,7 +367,7 @@
     <!-- About Us Section -->
     <section class="about-us">
         <div class="container">
-            <h2>ABOUT US</h2>
+            <h2>About Us</h2>
             <h3>We help people to overcome their mental problems</h3>
             <p>Moodify offers a range of counseling services tailored to your personal needs, including support for
                 career development, relationships, parenting, and self-esteem.</p>
@@ -293,7 +385,7 @@
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-body text-center">
-                            <img src="images/path_to_help_icon.png" alt="Reach Out for Help" class="mb-3">
+                            <img src="images/AboutUs3.png" alt="Reach Out for Help" class="mb-3">
                             <h5>Reach Out for Help</h5>
                             <p>If you ever find yourself in crisis or in need of immediate support, don't hesitate to
                                 reach out to a trusted friend, family member, or mental health professional. We're here
@@ -320,7 +412,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <img src="images/Moodify Logo.png" alt="Moodify" class="mb-3">
+                    <img src="images/Moodify Logo.png" alt="Moodify" class="mb-3 footer-logo">
                     <p>Empowering minds, fostering well-being</p>
                 </div>
                 <div class="col-md-3">
