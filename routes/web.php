@@ -15,7 +15,7 @@ Route::get('/', function () {
     }
 });
 
-// Custom Authentication routes (if you're overriding the default ones)
+// Custom Authentication routes
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'register']);
 
@@ -23,7 +23,9 @@ Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::get('/blog', [BlogController::class, 'blog'])->name('blog');
+// Blog-related routes
+Route::get('/blog', [BlogController::class, 'showBlog'])->name('blog'); // Get the list of blog posts
+Route::get('/articles/{id}', [BlogController::class, 'show'])->name('articles.show'); // Show specific article
 
 // Protected routes - accessible only after login
 Route::middleware('auth')->group(function () {
@@ -34,13 +36,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/forum', function () {
         return view('forum');
     })->name('forum');
-
-    Route::get('/blog', function () {
-        return view('blog');
-    })->name('blog');
 });
 
 Route::get('/welcome', function () {
-    return view('welcome'); // Point to the welcome view instead of redirecting to itself
+    return view('welcome'); 
 })->name('welcome');
-

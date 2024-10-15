@@ -337,28 +337,35 @@
     <section class="blog">
         <div class="container">
             <div class="row">
+                <!-- First Article -->
                 <div class="col-md-6 mb-4">
-                    <div class="card">
-                        <img src="images/Article1.png" class="card-img-top" alt="Get your mood back">
-                        <div class="card-body">
-                            <h5 class="card-title">How to get your mood back in 5 minutes</h5>
-                            <p class="card-text">Feeling down? Don't worry, it's completely normal to experience mood
-                                swings. Here are some quick and easy tips to help you lift your spirits in just a few
-                                minutes.</p>
-                            <p class="text-muted">Oct 10, 2024 | Joshua R.</p>
+                    <a href="{{ route('articles.show', ['id' => $blog->id]) }}" style="text-decoration: none; color: inherit;">
+                        <div class="card">
+                            <img src="images/Article1.png" class="card-img-top" alt="Get your mood back">
+                            <div class="card-body">
+                                <h5 class="card-title">How to get your mood back in 5 minutes</h5>
+                                <p class="card-text">Feeling down? Don't worry, it's completely normal to experience
+                                    mood swings. Here are some quick and easy tips to help you lift your spirits in just
+                                    a few minutes.</p>
+                                <p class="text-muted">Oct 10, 2024 | Joshua R.</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
+
+                <!-- Second Article -->
                 <div class="col-md-6 mb-4">
-                    <div class="card">
-                        <img src="images/Article2.png" class="card-img-top" alt="Types of Moods">
-                        <div class="card-body">
-                            <h5 class="card-title">Learn types of Moods</h5>
-                            <p class="card-text">Moods are a natural and essential part of the human experience. They
-                                can range from feelings of joy and excitement to sadness, anger, and fear.</p>
-                            <p class="text-muted">Aug 8, 2024 | Joshua R.</p>
+                    <a href="{{ route('articles.show', ['id' => $blog->id]) }}" style="text-decoration: none; color: inherit;">
+                        <div class="card">
+                            <img src="images/Article2.png" class="card-img-top" alt="Types of Moods">
+                            <div class="card-body">
+                                <h5 class="card-title">Learn types of Moods</h5>
+                                <p class="card-text">Moods are a natural and essential part of the human experience.
+                                    They can range from feelings of joy and excitement to sadness, anger, and fear.</p>
+                                <p class="text-muted">Aug 8, 2024 | Joshua R.</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
