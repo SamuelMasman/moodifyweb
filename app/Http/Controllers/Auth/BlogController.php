@@ -2,31 +2,28 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Blog;
-use Illuminate\Http\Request;
+use App\Models\Blog; // Ensure this is included
 
 class BlogController extends Controller
 {
-    // Display a list of featured blogs
-    public function showBlog()
+    // Method to display the welcome page with blogs
+    public function showWelcome()
     {
-        $featuredBlogs = Blog::where('is_featured', true)->get();
-        return view('blog', ['featuredBlogs' => $featuredBlogs]);
+        $blogs = Blog::all(); // Fetch all blogs from the database
+        return view('welcome', compact('blogs'));
     }
 
-    // Display a single blog post by ID
+    // Method to display the blog list
+    public function showBlog()
+    {
+        $blogs = Blog::where('is_featured', true)->get();
+        return view('blog', compact('blogs'));
+    }
+
+    // Method to display a single blog
     public function show($id)
     {
-        // Find the blog by its ID
         $blog = Blog::findOrFail($id);
-
-        // Pass related articles logic here if needed
-        $relatedArticles = Blog::where('id', '!=', $id)->take(5)->get();
-
-        // Return the view for the blog detail page
-        return view('article', [
-            'blog' => $blog,
-            'relatedArticles' => $relatedArticles,
-        ]);
+        return view('article', compact('blog'));
     }
 }

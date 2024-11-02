@@ -337,25 +337,28 @@
     <section class="blog">
         <div class="container">
             <div class="row">
-                <!-- First Article -->
-                <div class="col-md-6 mb-4">
-                    <a href="{{ route('articles.show', ['id' => $blog->id]) }}" style="text-decoration: none; color: inherit;">
-                        <div class="card">
-                            <img src="images/Article1.png" class="card-img-top" alt="Get your mood back">
-                            <div class="card-body">
-                                <h5 class="card-title">How to get your mood back in 5 minutes</h5>
-                                <p class="card-text">Feeling down? Don't worry, it's completely normal to experience
-                                    mood swings. Here are some quick and easy tips to help you lift your spirits in just
-                                    a few minutes.</p>
-                                <p class="text-muted">Oct 10, 2024 | Joshua R.</p>
+                @foreach ($blogs as $blog)
+                    <div class="col-md-6 mb-4">
+                        <a href="{{ route('articles.show', ['id' => $blog->id]) }}"
+                            style="text-decoration: none; color: inherit;">
+                            <div class="card">
+                                <img src="images/Article1.png" class="card-img-top" alt="{{ $blog->title }}">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ $blog->title }}</h5>
+                                    <p class="card-text">{{ \Illuminate\Support\Str::limit($blog->content, 100) }}</p>
+                                    <p class="text-muted">{{ $blog->created_at->format('M d, Y') }} |
+                                        {{ $blog->author }}</p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
+                        </a>
+                    </div>
+                @endforeach
+
 
                 <!-- Second Article -->
                 <div class="col-md-6 mb-4">
-                    <a href="{{ route('articles.show', ['id' => $blog->id]) }}" style="text-decoration: none; color: inherit;">
+                    <a href="{{ route('articles.show', ['id' => $blog->id]) }}"
+                        style="text-decoration: none; color: inherit;">
                         <div class="card">
                             <img src="images/Article2.png" class="card-img-top" alt="Types of Moods">
                             <div class="card-body">
