@@ -250,6 +250,11 @@
             width: 250px;
             height: auto;
         }
+
+        .social-icon {
+            width: 24px;
+            height: 24px;
+        }
     </style>
 </head>
 
@@ -417,55 +422,61 @@
         </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <img src="images/Moodify Logo.png" alt="Moodify" class="mb-3 footer-logo">
-                    <p>Empowering minds, fostering well-being</p>
-                </div>
-                <div class="col-md-3">
-                    <h5>Services</h5>
-                    <ul class="list-unstyled">
-                        <li>Relationship</li>
-                        <li>Career</li>
-                        <li>Parenting</li>
-                        <li>Marriage</li>
-                        <li>Self-esteem</li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h5>Get to Know Us</h5>
-                    <ul class="list-unstyled">
-                        <li>About Us</li>
-                        <li>Blog</li>
-                        <li>FAQ</li>
-                        <li>Testimonials</li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h5>Company</h5>
-                    <ul class="list-unstyled">
-                        <li>Terms & Conditions</li>
-                        <li>Privacy Policy</li>
-                        <li>Cookie Policy</li>
-                    </ul>
-                </div>
+<!-- Footer Section -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <img src="images/Moodify Logo.png" alt="Moodify" class="mb-3 footer-logo">
+                <p>Empowering minds, fostering well-being</p>
             </div>
-            <hr>
-            <div class="row">
-                <div class="col-md-6">
-                    <p>&copy; 2024 Moodify. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-end">
-                    <a href="#" class="me-3"><img src="images/facebook_icon.png" alt="Facebook"></a>
-                    <a href="#" class="me-3"><img src="images/twitter_icon.png" alt="Twitter"></a>
-                    <a href="#"><img src="images/instagram_icon.png" alt="Instagram"></a>
-                </div>
+            <div class="col-md-3">
+                <h5>Services</h5>
+                <ul class="list-unstyled">
+                    <li>Relationship</li>
+                    <li>Career</li>
+                    <li>Parenting</li>
+                    <li>Marriage</li>
+                    <li>Self-esteem</li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>Get to Know Us</h5>
+                <ul class="list-unstyled">
+                    <li>About Us</li>
+                    <li>Blog</li>
+                    <li>FAQ</li>
+                    <li>Testimonials</li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>Company</h5>
+                <ul class="list-unstyled">
+                    <li>Terms & Conditions</li>
+                    <li>Privacy Policy</li>
+                    <li>Cookie Policy</li>
+                </ul>
             </div>
         </div>
-    </footer>
+        <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <p>&copy; 2024 Moodify. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-end">
+                <a href="https://www.tiktok.com/@moodify.idn" target="_blank" class="me-3">
+                    <img src="images/tiktok-logo.png" alt="TikTok" class="social-icon">
+                </a>
+                <a href="https://x.com/MoodifyWeb" target="_blank" class="me-3">
+                    <img src="images/x-icon.png" alt="Twitter" class="social-icon">
+                </a>
+                <a href="https://www.instagram.com/moodify.idn" target="_blank">
+                    <img src="images/ig-icon.png" alt="Instagram" class="social-icon">
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
