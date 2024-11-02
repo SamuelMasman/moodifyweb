@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ServiceController;
 
 // Home Page - Accessible to all
 Route::get('/', [BlogController::class, 'showWelcome'])->name('home');
@@ -17,6 +18,9 @@ Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->na
 Route::post('/register', [RegisterController::class, 'register']);
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
+// Service Routes
+Route::get('/services', [ServiceController::class, 'showServices'])->name('services');
 
 // Blog-related Routes
 Route::get('/blog', [BlogController::class, 'showBlog'])->name('blog'); // List of blog posts

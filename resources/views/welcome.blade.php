@@ -271,7 +271,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('services') }}">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Forum</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -289,6 +289,7 @@
         </div>
     </nav>
 
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
@@ -297,7 +298,8 @@
                     <h1>Empower Your Mind with Personalized Mental Health Care</h1>
                     <p>Looking for guidance in your mental wellness journey? Our expert therapists are available to
                         support you.</p>
-                    <button class="btn btn-get-started">Get Started</button>
+                    <button class="btn btn-get-started" onclick="window.location.href='{{ route('services') }}'">Get
+                        Started</button>
                 </div>
                 <div class="col-md-6">
                     <img src="images/Home Image 1.png" alt="Mental Health Care" class="img-fluid">
@@ -422,61 +424,61 @@
         </div>
     </section>
 
-<!-- Footer Section -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <img src="images/Moodify Logo.png" alt="Moodify" class="mb-3 footer-logo">
-                <p>Empowering minds, fostering well-being</p>
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="images/Moodify Logo.png" alt="Moodify" class="mb-3 footer-logo">
+                    <p>Empowering minds, fostering well-being</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Services</h5>
+                    <ul class="list-unstyled">
+                        <li>Relationship</li>
+                        <li>Career</li>
+                        <li>Parenting</li>
+                        <li>Marriage</li>
+                        <li>Self-esteem</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Get to Know Us</h5>
+                    <ul class="list-unstyled">
+                        <li>About Us</li>
+                        <li>Blog</li>
+                        <li>FAQ</li>
+                        <li>Testimonials</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li>Terms & Conditions</li>
+                        <li>Privacy Policy</li>
+                        <li>Cookie Policy</li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-md-3">
-                <h5>Services</h5>
-                <ul class="list-unstyled">
-                    <li>Relationship</li>
-                    <li>Career</li>
-                    <li>Parenting</li>
-                    <li>Marriage</li>
-                    <li>Self-esteem</li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <h5>Get to Know Us</h5>
-                <ul class="list-unstyled">
-                    <li>About Us</li>
-                    <li>Blog</li>
-                    <li>FAQ</li>
-                    <li>Testimonials</li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <h5>Company</h5>
-                <ul class="list-unstyled">
-                    <li>Terms & Conditions</li>
-                    <li>Privacy Policy</li>
-                    <li>Cookie Policy</li>
-                </ul>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 Moodify. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="https://www.tiktok.com/@moodify.idn" target="_blank" class="me-3">
+                        <img src="images/tiktok-logo.png" alt="TikTok" class="social-icon">
+                    </a>
+                    <a href="https://x.com/MoodifyWeb" target="_blank" class="me-3">
+                        <img src="images/x-icon.png" alt="Twitter" class="social-icon">
+                    </a>
+                    <a href="https://www.instagram.com/moodify.idn" target="_blank">
+                        <img src="images/ig-icon.png" alt="Instagram" class="social-icon">
+                    </a>
+                </div>
             </div>
         </div>
-        <hr>
-        <div class="row">
-            <div class="col-md-6">
-                <p>&copy; 2024 Moodify. All rights reserved.</p>
-            </div>
-            <div class="col-md-6 text-end">
-                <a href="https://www.tiktok.com/@moodify.idn" target="_blank" class="me-3">
-                    <img src="images/tiktok-logo.png" alt="TikTok" class="social-icon">
-                </a>
-                <a href="https://x.com/MoodifyWeb" target="_blank" class="me-3">
-                    <img src="images/x-icon.png" alt="Twitter" class="social-icon">
-                </a>
-                <a href="https://www.instagram.com/moodify.idn" target="_blank">
-                    <img src="images/ig-icon.png" alt="Instagram" class="social-icon">
-                </a>
-            </div>
-        </div>
-    </div>
-</footer>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
