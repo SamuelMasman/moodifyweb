@@ -23,7 +23,7 @@ Route::get('/blog', [BlogController::class, 'showBlog'])->name('blog'); // List 
 Route::get('/articles/{id}', [BlogController::class, 'show'])->name('articles.show'); // Single article view
 
 // Welcome Page Route
-Route::get('/welcome', [BlogController::class, 'showWelcome'])->name('welcome');
+Route::get('/welcome', [LoginController::class, 'showWelcome'])->name('welcome');
 
 // Protected Routes
 Route::middleware('auth')->group(function () {
