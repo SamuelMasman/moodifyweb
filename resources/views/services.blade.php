@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: white;
+            background-color: #f8f9fa;
         }
 
         .navbar {
@@ -39,10 +39,10 @@
         }
 
         .steps-container h1 {
-            color: #005F73;
+            color: #075985;
             font-size: 2rem;
             font-weight: bold;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .steps-wrapper {
@@ -69,13 +69,13 @@
         }
 
         .step-1 {
-            background-color: #005F73;
+            background-color: #075985;
             color: white;
         }
 
         .step-2, .step-3 {
             background-color: #E5F2F6;
-            color: #005F73;
+            color: #075985;
         }
 
         .step-line {
@@ -93,18 +93,23 @@
             background-color: #F8FBFC;
             border-radius: 10px;
             padding: 2rem;
-            height: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .package-card:hover {
+            transform: translateY(-10px);
         }
 
         .package-title {
-            color: #005F73;
+            color: #075985;
             font-weight: bold;
             font-size: 1.2rem;
             margin-bottom: 0.5rem;
         }
 
         .package-price {
-            color: #005F73;
+            color: #075985;
             font-weight: bold;
             margin-bottom: 1.5rem;
         }
@@ -126,14 +131,14 @@
 
         .package-features li::before {
             content: "✓";
-            color: #005F73;
+            color: #075985;
             font-weight: bold;
         }
 
         .apply-btn {
             background-color: white;
-            color: #005F73;
-            border: 2px solid #005F73;
+            color: #075985;
+            border: 2px solid #075985;
             border-radius: 25px;
             padding: 0.5rem 2rem;
             font-weight: bold;
@@ -141,7 +146,7 @@
         }
 
         .apply-btn:hover {
-            background-color: #005F73;
+            background-color: #075985;
             color: white;
         }
     </style>
@@ -203,7 +208,7 @@
                         <li>+1 month premium access to self-care services</li>
                         <li>Free follow-up from the psychologist</li>
                     </ul>
-                    <button class="apply-btn">Apply</button>
+                    <button onclick="window.location.href='{{ route('choose.psychologist') }}'" class="apply-btn">Apply</button>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
@@ -217,7 +222,7 @@
                         <li>+1 month premium access to self-care services</li>
                         <li>Free follow-up from the psychologist</li>
                     </ul>
-                    <button class="apply-btn">Apply</button>
+                    <button onclick="window.location.href='{{ route('choose.psychologist') }}'" class="apply-btn">Apply</button>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
@@ -231,7 +236,7 @@
                         <li>+1 month premium access to self-care services</li>
                         <li>Free follow-up per session</li>
                     </ul>
-                    <button class="apply-btn">Apply</button>
+                    <button onclick="window.location.href='{{ route('choose.psychologist') }}'" class="apply-btn">Apply</button>
                 </div>
             </div>
         </div>

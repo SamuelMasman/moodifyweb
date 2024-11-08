@@ -22,6 +22,11 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 // Service Routes
 Route::get('/services', [ServiceController::class, 'showServices'])->name('services');
 
+// Psychologist Selection Route
+Route::get('/choose-psychologist', function () {
+    return view('choose_psychologist');
+})->name('choose.psychologist');
+
 // Blog-related Routes
 Route::get('/blog', [BlogController::class, 'showBlog'])->name('blog'); // List of blog posts
 Route::get('/articles/{id}', [BlogController::class, 'show'])->name('articles.show'); // Single article view
