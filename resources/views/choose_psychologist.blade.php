@@ -139,7 +139,7 @@
                     <button class="btn btn-outline-primary">17:00</button>
                 </div>
             </div>
-            <button class="book-now-btn ms-auto">Book Now</button>
+            <a href="{{ route('checkout') }}" class="btn btn-warning">Book Now</a>
         </div>
     </div>
 
