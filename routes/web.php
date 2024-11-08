@@ -27,7 +27,9 @@ Route::get('/choose-psychologist', function () {
     return view('choose_psychologist');
 })->name('choose.psychologist');
 
-Route::get('/checkout', [ServiceController::class, 'showCheckout'])->name('checkout');
+Route::get('/checkout', function () {
+    return view('checkout');
+})->name('checkout');
 
 // Blog-related Routes
 Route::get('/blog', [BlogController::class, 'showBlog'])->name('blog'); // List of blog posts

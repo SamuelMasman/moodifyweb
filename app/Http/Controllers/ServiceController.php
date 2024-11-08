@@ -11,9 +11,4 @@ class ServiceController extends Controller
     {
         return view('services'); // Ensure 'services.blade.php' exists in 'resources/views'
     }
-
-    public function showCheckout()
-    {
-        return view('services.checkout');
-    }
 }
