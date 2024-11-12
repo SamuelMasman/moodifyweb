@@ -1,11 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Choose Your Psychologist</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        /* Header Styles */
+        .navbar {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand img {
+            height: 80px;
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: bold;
+            margin: 0 10px;
+            color: #036AA1;
+        }
+
+        .navbar-nav .btn-login {
+            background-color: #FF9F1C;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            font-weight: bold;
+            border-radius: 20px;
+        }
+
+        .btn-login {
+            border: 2px solid #FF9F1C;
+            background-color: transparent;
+            color: #FF9F1C;
+            border-radius: 25px;
+            padding: 8px 20px;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn-login:hover {
+            background-color: #FF9F1C;
+            color: white;
+        }
+
+        .btn-get-started {
+            background-color: #FF9F1C;
+            color: white;
+            padding: 12px 30px;
+            font-weight: bold;
+            border: none;
+            border-radius: 30px;
+        }
+
+        .btn-get-started:hover {
+            background-color: #e57a00;
+        }
+
         body {
             font-family: Arial, sans-serif;
             background-color: white;
@@ -87,8 +142,36 @@
         }
     </style>
 </head>
-<body>
 
+<body>
+    <!-- Header Section -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/Moodify Logo.png" alt="Moodify Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('services') }}">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Forum</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            EN
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">EN</a></li>
+                            <li><a class="dropdown-item" href="#">ID</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <!-- Steps Section -->
     <div class="steps-container">
         <h1>Step 2: Choose Your Psychologist</h1>
@@ -145,4 +228,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

@@ -1,11 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Complete Your Counseling Purchase</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        /* Header Styles */
+        .navbar {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand img {
+            height: 80px;
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: bold;
+            margin: 0 10px;
+            color: #036AA1;
+        }
+
+        .navbar-nav .btn-login {
+            background-color: #FF9F1C;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            font-weight: bold;
+            border-radius: 20px;
+        }
+
+        .btn-login {
+            border: 2px solid #FF9F1C;
+            background-color: transparent;
+            color: #FF9F1C;
+            border-radius: 25px;
+            padding: 8px 20px;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn-login:hover {
+            background-color: #FF9F1C;
+            color: white;
+        }
+
+        .btn-get-started {
+            background-color: #FF9F1C;
+            color: white;
+            padding: 12px 30px;
+            font-weight: bold;
+            border: none;
+            border-radius: 30px;
+        }
+
+        .btn-get-started:hover {
+            background-color: #e57a00;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+        
         :root {
             --primary-color: #006D87;
             --light-blue: #F5F9FA;
@@ -70,7 +130,8 @@
             font-weight: 500;
         }
 
-        .step-1, .step-2 {
+        .step-1,
+        .step-2 {
             background-color: var(--light-blue);
             color: var(--primary-color);
         }
@@ -174,27 +235,33 @@
         }
     </style>
 </head>
+
 <body>
-    <nav class="navbar">
+    <!-- Header Section -->
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <div class="d-flex justify-content-between align-items-center w-100">
-                <a href="#" class="navbar-brand">
-                    <img src="path-to-your-logo.png" alt="Moodify" class="logo">
-                </a>
-                <div class="nav-items d-flex align-items-center gap-4">
-                    <a href="#" class="nav-link">Home</a>
-                    <a href="#" class="nav-link active">Services</a>
-                    <a href="#" class="nav-link">Forum</a>
-                    <div class="d-flex align-items-center gap-3">
-                        <select class="form-select border-0">
-                            <option>EN</option>
-                        </select>
-                        <div class="d-flex align-items-center gap-2">
-                            <span>Hi, Alisha</span>
-                            <img src="path-to-avatar.png" alt="Avatar" class="rounded-circle" width="32" height="32">
-                        </div>
-                    </div>
-                </div>
+            <a class="navbar-brand" href="#">
+                <img src="images/Moodify Logo.png" alt="Moodify Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('services') }}">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Forum</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            EN
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">EN</a></li>
+                            <li><a class="dropdown-item" href="#">ID</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -247,7 +314,8 @@
                         <h5 class="mb-3">Discount Code</h5>
                         <div class="discount-input d-flex align-items-center">
                             <img src="path-to-discount-icon.png" alt="Discount Icon">
-                            <input type="text" class="border-0 flex-grow-1" placeholder="Enter discount code" value="MOODIFYMANTAP">
+                            <input type="text" class="border-0 flex-grow-1" placeholder="Enter discount code"
+                                value="MOODIFYMANTAP">
                             <button class="btn-apply">Apply</button>
                         </div>
 
@@ -271,52 +339,56 @@
                 <!-- Right Column: Payment Form -->
                 <div class="col-lg-6">
                     <form class="payment-form">
-                        <div class="mb-3">
-                            <label class="form-label">Email</label>
-                            <input type="email" class="form-control" placeholder="Enter your email">
-                        </div>
+                        <form class="payment-form" action="{{ route('payment.process') }}" method="POST">
+                            @csrf
+                            <div class="mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" placeholder="Enter your email">
+                            </div>
 
-                        <div class="mb-3">
-                            <label class="form-label">Phone Number</label>
-                            <input type="tel" class="form-control" placeholder="Enter your phone number">
-                        </div>
+                            <div class="mb-3">
+                                <label class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" placeholder="Enter your phone number">
+                            </div>
 
-                        <div class="mb-4">
-                            <label class="form-label">Payment Method</label>
-                            <div class="payment-method-card selected">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="d-flex align-items-center gap-3">
-                                        <input type="radio" name="payment" checked>
-                                        <div>
-                                            <div>**** 8765</div>
-                                            <small class="text-muted">Visa • <a href="#" class="text-decoration-none">Edit</a></small>
+                            <div class="mb-4">
+                                <label class="form-label">Payment Method</label>
+                                <div class="payment-method-card selected">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <input type="radio" name="payment" checked>
+                                            <div>
+                                                <div>**** 8765</div>
+                                                <small class="text-muted">Visa • <a href="#"
+                                                        class="text-decoration-none">Edit</a></small>
+                                            </div>
                                         </div>
+                                        <img src="path-to-visa-logo.png" alt="Visa" height="24">
                                     </div>
-                                    <img src="path-to-visa-logo.png" alt="Visa" height="24">
+                                </div>
+
+                                <div class="payment-method-card">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <input type="radio" name="payment">
+                                            <div>
+                                                <div>**** 3345</div>
+                                                <small class="text-muted">Gopay • <a href="#"
+                                                        class="text-decoration-none">Edit</a></small>
+                                            </div>
+                                        </div>
+                                        <img src="path-to-gopay-logo.png" alt="Gopay" height="24">
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="payment-method-card">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="d-flex align-items-center gap-3">
-                                        <input type="radio" name="payment">
-                                        <div>
-                                            <div>**** 3345</div>
-                                            <small class="text-muted">Gopay • <a href="#" class="text-decoration-none">Edit</a></small>
-                                        </div>
-                                    </div>
-                                    <img src="path-to-gopay-logo.png" alt="Gopay" height="24">
-                                </div>
+                            <div class="mb-4">
+                                <label class="form-label">Card holder name</label>
+                                <input type="text" class="form-control" placeholder="Enter card holder name">
                             </div>
-                        </div>
-
-                        <div class="mb-4">
-                            <label class="form-label">Card holder name</label>
-                            <input type="text" class="form-control" placeholder="Enter card holder name">
-                        </div>
-
-                        <button type="submit" class="btn-pay">Pay</button>
-                    </form>
+                            <button type="button" class="btn-pay"
+                                onclick="window.location.href='{{ route('profile') }}'">Pay</button>
+                        </form>
                 </div>
             </div>
         </div>
@@ -324,4 +396,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html> 
+
+</html>

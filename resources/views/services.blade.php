@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,29 +8,63 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-        }
-
+        /* Header Styles */
         .navbar {
-            padding: 1rem 2rem;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .navbar-brand img {
-            height: 40px;
+            height: 80px;
         }
 
-        .user-profile {
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .navbar-nav .nav-link {
+            font-weight: bold;
+            margin: 0 10px;
+            color: #036AA1;
         }
 
-        .user-profile img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
+        .navbar-nav .btn-login {
+            background-color: #FF9F1C;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            font-weight: bold;
+            border-radius: 20px;
+        }
+
+        .btn-login {
+            border: 2px solid #FF9F1C;
+            background-color: transparent;
+            color: #FF9F1C;
+            border-radius: 25px;
+            padding: 8px 20px;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn-login:hover {
+            background-color: #FF9F1C;
+            color: white;
+        }
+
+        .btn-get-started {
+            background-color: #FF9F1C;
+            color: white;
+            padding: 12px 30px;
+            font-weight: bold;
+            border: none;
+            border-radius: 30px;
+        }
+
+        .btn-get-started:hover {
+            background-color: #e57a00;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
         }
 
         /* Steps Section */
@@ -73,7 +108,8 @@
             color: white;
         }
 
-        .step-2, .step-3 {
+        .step-2,
+        .step-3 {
             background-color: #E5F2F6;
             color: #075985;
         }
@@ -151,24 +187,33 @@
         }
     </style>
 </head>
+
 <body>
-    <!-- Navbar -->
+    <!-- Header Section -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="path_to_moodify_logo.png" alt="Moodify">
-                Moodify
+                <img src="images/Moodify Logo.png" alt="Moodify Logo">
             </a>
-            <div class="d-flex align-items-center">
-                <div class="nav-item dropdown me-3">
-                    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown">
-                        EN
-                    </a>
-                </div>
-                <div class="user-profile">
-                    <span>Hi, Alisha</span>
-                    <img src="path_to_profile_image.png" alt="Profile">
-                </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('services') }}">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Forum</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            EN
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">EN</a></li>
+                            <li><a class="dropdown-item" href="#">ID</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -208,7 +253,8 @@
                         <li>+1 month premium access to self-care services</li>
                         <li>Free follow-up from the psychologist</li>
                     </ul>
-                    <button onclick="window.location.href='{{ route('choose.psychologist') }}'" class="apply-btn">Apply</button>
+                    <button onclick="window.location.href='{{ route('choose.psychologist') }}'"
+                        class="apply-btn">Apply</button>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
@@ -222,7 +268,8 @@
                         <li>+1 month premium access to self-care services</li>
                         <li>Free follow-up from the psychologist</li>
                     </ul>
-                    <button onclick="window.location.href='{{ route('choose.psychologist') }}'" class="apply-btn">Apply</button>
+                    <button onclick="window.location.href='{{ route('choose.psychologist') }}'"
+                        class="apply-btn">Apply</button>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
@@ -236,7 +283,8 @@
                         <li>+1 month premium access to self-care services</li>
                         <li>Free follow-up per session</li>
                     </ul>
-                    <button onclick="window.location.href='{{ route('choose.psychologist') }}'" class="apply-btn">Apply</button>
+                    <button onclick="window.location.href='{{ route('choose.psychologist') }}'"
+                        class="apply-btn">Apply</button>
                 </div>
             </div>
         </div>
@@ -245,4 +293,5 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

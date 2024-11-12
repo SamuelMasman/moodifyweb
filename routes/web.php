@@ -6,6 +6,8 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PaymentController;
 
 // Home Page - Accessible to all
 Route::get('/', [BlogController::class, 'showWelcome'])->name('home');
@@ -30,6 +32,14 @@ Route::get('/choose-psychologist', function () {
 Route::get('/checkout', function () {
     return view('checkout');
 })->name('checkout');
+
+Route::get('/profile', function () {
+    return view('profile');
+})->name('profile');
+
+Route::get('/profile', [ProfileController::class, 'show'])->name('profile');
+
+Route::post('/checkout', [PaymentController::class, 'processPayment'])->name('payment.process');
 
 // Blog-related Routes
 Route::get('/blog', [BlogController::class, 'showBlog'])->name('blog'); // List of blog posts
