@@ -49,10 +49,6 @@
 
         /* Main Content Styling */
         .tab-content {
-            background-color: white;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 12px;
             margin-left: 20px;
         }
 
@@ -80,6 +76,54 @@
 
         .tab-content h4 {
             margin-bottom: 20px;
+        }
+
+        /* Active Package Card */
+        .package-card {
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .package-icon {
+            background-color: #f0f8fc;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .package-info h5 {
+            margin: 0;
+            font-weight: bold;
+            color: #036AA1;
+        }
+
+        .package-info p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .btn-consult {
+            background-color: #036AA1;
+            color: white;
+            font-weight: bold;
+            border-radius: 8px;
+            padding: 8px 16px;
+            border: none;
+            margin-left: auto;
+        }
+
+        .btn-consult:hover {
+            background-color: #025680;
         }
     </style>
 </head>
@@ -138,11 +182,16 @@
                     <!-- Dashboard Tab -->
                     <div class="tab-pane fade show active" id="dashboard">
                         <h4>Active Package</h4>
-                        <div class="border p-3 rounded">
-                            <h5>Chat and Video package</h5>
-                            <p>Psychologist: Martha Amberta, M.Psi</p>
-                            <p>Rp160.000 - Valid until: 12/02/2024</p>
-                            <button class="btn btn-primary">Consult Now</button>
+                        <div class="package-card">
+                            <div class="package-icon">
+                                <img src="{{ asset('images/Chat icon.png') }}" alt="Chat Icon" width="80" height="80">
+                            </div>
+                            <div class="package-info">
+                                <h5>Chat and Video Package</h5>
+                                <p>Psychologist: Martha Amberta, M.Psi</p>
+                                <p>Rp160.000 - Valid until: 12/02/2024</p>
+                            </div>
+                            <button class="btn-consult">Consult Now</button>
                         </div>
                     </div>
 
