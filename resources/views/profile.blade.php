@@ -191,7 +191,7 @@
                                 <p>Psychologist: Martha Amberta, M.Psi</p>
                                 <p>Rp160.000 - Valid until: 12/02/2024</p>
                             </div>
-                            <button class="btn-consult">Consult Now</button>
+                            <button class="btn btn-primary" onclick="window.location.href='{{ route('callchat') }}'">Consult Now</button>
                         </div>
                     </div>
 

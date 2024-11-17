@@ -8,6 +8,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\CallChatController;
 
 // Home Page - Accessible to all
 Route::get('/', [BlogController::class, 'showWelcome'])->name('home');
@@ -36,6 +37,9 @@ Route::get('/checkout', function () {
 Route::get('/profile', function () {
     return view('profile');
 })->name('profile');
+
+// CallChat Route
+Route::get('/callchat', [CallChatController::class, 'show'])->name('callchat');
 
 Route::get('/profile', [ProfileController::class, 'show'])->name('profile');
 
