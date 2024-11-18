@@ -78,52 +78,57 @@
             margin-bottom: 20px;
         }
 
-        /* Active Package Card */
         .package-card {
-            border: 1px solid #ddd;
-            border-radius: 12px;
-            padding: 20px;
             background-color: white;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 1.5rem;
             display: flex;
             align-items: center;
-            gap: 15px;
-            margin-top: 20px;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
 
         .package-icon {
-            background-color: #f0f8fc;
-            padding: 15px;
+            background-color: #f0f9ff;
+            padding: 1rem;
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
+        .package-info {
+            flex-grow: 1;
+        }
+
         .package-info h5 {
-            margin: 0;
-            font-weight: bold;
             color: #036AA1;
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
         }
 
         .package-info p {
-            margin: 0;
-            font-size: 0.9rem;
-            color: #666;
+            color: #6b7280;
+            margin-bottom: 0.25rem;
         }
 
         .btn-consult {
             background-color: #036AA1;
             color: white;
-            font-weight: bold;
-            border-radius: 8px;
-            padding: 8px 16px;
-            border: none;
-            margin-left: auto;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.2s;
         }
 
         .btn-consult:hover {
             background-color: #025680;
+            color: white;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -184,14 +189,16 @@
                         <h4>Active Package</h4>
                         <div class="package-card">
                             <div class="package-icon">
-                                <img src="{{ asset('images/Chat icon.png') }}" alt="Chat Icon" width="80" height="80">
+                                <img src="{{ asset('images/Chat icon.png') }}" alt="Chat Icon" width="48"
+                                    height="48">
                             </div>
                             <div class="package-info">
                                 <h5>Chat and Video Package</h5>
                                 <p>Psychologist: Martha Amberta, M.Psi</p>
                                 <p>Rp160.000 - Valid until: 12/02/2024</p>
                             </div>
-                            <button class="btn btn-primary" onclick="window.location.href='{{ route('callchat') }}'">Consult Now</button>
+                            <button type="button" class="btn-consult"
+                            onclick="window.location.href='{{ route('callchat') }}'">Consult</button>
                         </div>
                     </div>
 

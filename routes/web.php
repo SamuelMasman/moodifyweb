@@ -34,15 +34,13 @@ Route::get('/checkout', function () {
     return view('checkout');
 })->name('checkout');
 
-Route::get('/profile', function () {
-    return view('profile');
-})->name('profile');
+// Profile Route
+Route::get('/profile', [ProfileController::class, 'show'])->name('profile');
 
 // CallChat Route
 Route::get('/callchat', [CallChatController::class, 'show'])->name('callchat');
 
-Route::get('/profile', [ProfileController::class, 'show'])->name('profile');
-
+// Checkout Payment Processing Route
 Route::post('/checkout', [PaymentController::class, 'processPayment'])->name('payment.process');
 
 // Blog-related Routes

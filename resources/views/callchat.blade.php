@@ -88,11 +88,11 @@
 </head>
 
 <body>
-    <!-- Navbar -->
+    <!-- Header Section -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="{{ asset('images/Moodify Logo.png') }}" alt="Moodify Logo">
+                <img src="images/Moodify Logo.png" alt="Moodify Logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -100,7 +100,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="{{ route('services') }}">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('services') }}">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Forum</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -112,16 +112,11 @@
                             <li><a class="dropdown-item" href="#">ID</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item d-flex align-items-center">
-                        <span class="me-2">Hi, Alisha</span>
-                        <img src="{{ asset('images/User PP.png') }}" alt="Avatar" class="rounded-circle" width="40"
-                            height="40">
-                    </li>
                 </ul>
             </div>
         </div>
     </nav>
-
+    
     <!-- Main Container -->
     <div class="container">
         <h1>Choose Your Preference</h1>
